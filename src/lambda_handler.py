@@ -42,6 +42,13 @@ def transform (data: list()) -> dict:
     }
 
 
+def lambda_handler (event, context):
+    message = 'Hello {} !'.format(event['key1'])
+    return {
+        'message': message
+    }
+
+
 if __name__ == '__main__':
     img_path = 'test_images/receipt_1.jpg'
     lines = extract(img_path)
